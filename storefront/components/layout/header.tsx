@@ -81,27 +81,23 @@ export default function Header() {
             </button>
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
-              <span className="font-heading text-2xl font-semibold tracking-tight">
-                Store
+            <Link href="/" className="flex items-center gap-1 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+              <span className="font-heading text-2xl lg:text-3xl font-medium tracking-[0.04em] text-form-espresso">
+                FORM<span className="text-form-sage">:</span>me
               </span>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
-              <Link href="/products" className="text-sm tracking-wide uppercase link-underline py-1" prefetch={true}>
-                Shop All
+              <Link href="/products" className="text-[11px] tracking-[0.22em] uppercase link-underline py-1" prefetch={true}>
+                The System
               </Link>
-              {collections?.slice(0, 4).map((collection: any) => (
-                <Link
-                  key={collection.id}
-                  href={`/collections/${collection.handle}`}
-                  className="text-sm tracking-wide uppercase link-underline py-1"
-                  prefetch={true}
-                >
-                  {collection.title}
-                </Link>
-              ))}
+              <Link href="/about" className="text-[11px] tracking-[0.22em] uppercase link-underline py-1" prefetch={true}>
+                Our Science
+              </Link>
+              <Link href="/faq" className="text-[11px] tracking-[0.22em] uppercase link-underline py-1" prefetch={true}>
+                Journal
+              </Link>
             </nav>
 
             {/* Actions */}

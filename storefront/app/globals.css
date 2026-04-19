@@ -4,18 +4,28 @@
 
 @layer base {
   :root {
-    --background: 40 20% 98%;
-    --foreground: 0 0% 10%;
-    --muted: 40 10% 94%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 35 40% 50%;
+    /* FORM:me — warm cream ground, deep espresso type, muted sage accent */
+    --background: 36 30% 97%;
+    --foreground: 25 25% 14%;
+    --muted: 36 22% 93%;
+    --muted-foreground: 25 10% 40%;
+    --accent: 100 14% 42%;
     --accent-foreground: 0 0% 100%;
-    --border: 40 10% 88%;
-    --ring: 35 40% 50%;
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
-    --destructive: 0 72% 51%;
+    --border: 32 18% 86%;
+    --ring: 100 14% 42%;
+    --primary: 25 25% 14%;
+    --primary-foreground: 36 30% 97%;
+    --destructive: 0 60% 48%;
     --destructive-foreground: 0 0% 98%;
+
+    /* FORM:me tonal palette */
+    --form-cream: 36 34% 95%;
+    --form-sand: 32 26% 88%;
+    --form-stone: 28 14% 72%;
+    --form-sage: 100 14% 42%;
+    --form-clay: 18 32% 58%;
+    --form-espresso: 25 25% 14%;
+    --form-ink: 24 20% 20%;
 
     /* Brand colors (dynamically injected from Store.metadata.brand) */
     /* Access in CSS: var(--brand-primary), var(--brand-secondary) */
@@ -115,6 +125,41 @@ html {
 /* Focus styles */
 :focus-visible {
   @apply outline-2 outline-offset-2 outline-ring;
+}
+
+/* FORM:me utility palette */
+@layer utilities {
+  .bg-form-cream { background-color: hsl(var(--form-cream)); }
+  .bg-form-sand { background-color: hsl(var(--form-sand)); }
+  .bg-form-stone { background-color: hsl(var(--form-stone)); }
+  .bg-form-sage { background-color: hsl(var(--form-sage)); }
+  .bg-form-clay { background-color: hsl(var(--form-clay)); }
+  .bg-form-espresso { background-color: hsl(var(--form-espresso)); }
+  .bg-form-ink { background-color: hsl(var(--form-ink)); }
+
+  .text-form-cream { color: hsl(var(--form-cream)); }
+  .text-form-sand { color: hsl(var(--form-sand)); }
+  .text-form-stone { color: hsl(var(--form-stone)); }
+  .text-form-sage { color: hsl(var(--form-sage)); }
+  .text-form-clay { color: hsl(var(--form-clay)); }
+  .text-form-espresso { color: hsl(var(--form-espresso)); }
+
+  .border-form-sand { border-color: hsl(var(--form-sand)); }
+  .border-form-stone { border-color: hsl(var(--form-stone)); }
+  .border-form-sage { border-color: hsl(var(--form-sage)); }
+  .border-form-espresso { border-color: hsl(var(--form-espresso)); }
+
+  .font-serif-display {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+  }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 40s linear infinite;
 }
 
 /* Cookie consent animation */
