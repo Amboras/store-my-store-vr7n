@@ -64,11 +64,11 @@ export default function HomePage() {
           {/* Hero Image */}
           <div className="relative aspect-[4/5] lg:aspect-[3/4] bg-muted rounded-sm overflow-hidden animate-fade-in">
             <Image
-              src={HERO_PLACEHOLDER}
-              alt="Hero - New Collection"
+              src="https://ahjviugsxpwzpkyzgrhi.supabase.co/storage/v1/object/public/product-user-files/ccb79710-669a-4630-a144-2e3108a142e9/glow_full%20package_3-01KPK01Q0J5CEFYFSEQHYE3NK4.webp"
+              alt="FORM:me glow – skin radiance complex"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
